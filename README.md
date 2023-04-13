@@ -31,9 +31,9 @@ I added the information about hole coordinates for the front panel in the folder
 ## Additional Information about specific Components
 Most of the components are through-hole, including the microchip part, thanks to the available Blue Pill board. There are a few SMD components, which I listed here.
 - DAC8552 (DAC, 8-VSSOP package, the most challenging component due to its size)
-- LM1117-3.3 (voltage regulator, SOT223 package)
-- LM4040B25 and LM4040B10 (voltage regulators, SOT23 package)
-- MMBT3904 (SMD version of the 2N3904 transistor, SOT23 Package)
+- LM1117-3.3 (voltage regulator, SOT-223 package)
+- LM4040B25 and LM4040B10 (voltage regulators, SOT-23-3 package)
+- MMBT3904 (SMD version of the 2N3904 transistor, SOT-23-3 Package)
 - 0.1uF bypass caps for ICs (1608 package)
 
 Concerning the resistor size, I am usually using small-size resistors, about half the length of the usual size, so they need less space on the PCB. If you want to use my Gerber files, you have to consider tht fact. You might still use normal size resistors and put them in a standing position on the boards. Should also work fine.
@@ -43,11 +43,7 @@ I shared the .hex files for the STM32F103 chip (bootloader and main) in the fold
 
 The upload process is the same, as for my Braids clone. You can check out my [Braids video](https://youtu.be/TBMySGm7jKk) about how to program the Blue Pill board.
 
-## Alternative Firmware (Mutated Mutables)
-Besides the adjusted original firmware from Mutable Instruments, I also added an alternative firmware from Tim Churches in the folder Firmware, called "Mutated Mutables".
-The .hex files are also adjusted to work with the Blue Pill board and my schematics.
-
-You find detailed information about the alternative firmware and functions on Tim Churches' website: [http://timchurches.github.io/Mutated-Mutables/](http://timchurches.github.io/Mutated-Mutables/)
+Alternative firmware versions available, like e.g. Sheep or the Parasite version, both available as .wav files can also be uploaded via the procedure described in the official Mutable Instruments manual.
 
 ## STM32F103 Version
 CAUTION! There are three different versions of the Blue Pill board available.
@@ -59,23 +55,28 @@ The versions differ in the flash memory size:
 
 The code size requires the 128kB version.
 However, that version is currently (Feb2023) difficult to find, if available at all.
+But it turned out, that STM3F103C8 is also ok for this module.
 
-I gave it a try and bought the 64kB version.
-Surprisingly, the programmer showed 128kB available flash memory, and the code could be loaded.
-I tried it with several boards.
-So it seems STM3F103C8 is ok for this module.
-
-If you want to see more about the chip programming process, you can check out my [YouTube video](https://youtu.be/TBMySGm7jKk).
+If you want to see more about the chip programming process, you can check out this [YouTube video](https://youtu.be/TBMySGm7jKk) for my MI Braids clone, which is also using the Blue Pill board.
 
 ## Calibration
 The calibration procedure is the same, as the one for the original module from Mutable Instruments.
 
-1. Disconnect any signal from the FM input,
-2. Connect the pitch CV output of a well-calibrated keyboard interface or MIDI-CV converter to the 1V/O input.
-3. Set the COARSE and FINE knobs to 12 o'clock position.
-4. Go to CAL. in the options list.
-5. Push the encoder for 1s. The screen displays >C2.
-6. Send a voltage of 1V to the 1V/O input.
-7. Click on the encoder. The screen displays >C4.
-8. Send a voltage of 3V to the 1V/O input.
-9. Click on the encoder to finish calibration.
+### CV input calibration
+This automatic procedure calibrates the V/Oct input (scale and offset), the FM input (offset), and the level input (offset).
+1. Set the FREQUENCY knob to its center position.
+2. Connect a patch cable to the FM input. Leave the other end of the cable unplugged (this prevents the normalling to \~1 semitone to be activated).
+3. Connect a patch cable to the Level input. Leave the other end of the cable unplugged (this prevents the normalling to full scale to be activated).
+4. Connect a MIDI>CV interface or precision voltage source to the V/Oct input.
+5. Hold the Mode switch for one second. All LEDs are lit (in yellow in the original version).
+6. Play a C2 note, or send a 1V voltage from your CV source.
+7. Press the Mode switch. The color of all LEDs are changing (to green in the original version).
+8. Play a C4 note, or send a 3V voltage from your CV source.
+9. Press the Mode switch.
+
+### Bipolar output offset calibration
+1. Remove any patch cable from the trigger input.
+2. Set the mode to AD or AR (mode LED is on, any color).
+3. Set the range to medium (range LED is off).
+4. Measure the voltage on the bipolar output. 
+5. Adjust the trimmer on the back of the board so that this voltage reaches 0V.
