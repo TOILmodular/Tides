@@ -54,10 +54,8 @@ The versions differ in the flash memory size:
 - STM32F103CB: 128kB flash memory
 
 The code size requires the 128kB version.
-However, that version is currently (Feb2023) difficult to find, if available at all.
+However, that version might be difficult to find, if available at all.
 But it turned out, that STM3F103C8 is also ok for this module.
-
-If you want to see more about the chip programming process, you can check out this [YouTube video](https://youtu.be/TBMySGm7jKk) for my MI Braids clone, which is also using the Blue Pill board.
 
 ## Calibration
 The calibration procedure is the same, as the one for the original module from Mutable Instruments.
