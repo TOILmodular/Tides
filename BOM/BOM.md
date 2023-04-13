@@ -33,7 +33,7 @@
 | Op Amp | TL074 | 1 | |
 | Op Amp | MCP6004 | 1 | |
 | Op Amp | MCP6002 | 1 | |
-| DAC | DAC8552 | 1 | SMD (8-TSSOP) |
+| DAC | DAC8552 | 1 | SMD (8-VSSOP) |
 | Development Board | STM32F103 Blue Pill (128kB) | 1 | |
 | Voltage Regulator | LM1117-3.3 | 2 | SMD (SOT-223) |
 | Voltage Regulator | LM4040B10 | 1 | SMD (SOT-23-3) |
