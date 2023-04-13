@@ -50,6 +50,6 @@
 | Header | 2.54mm Female 1x7 | 1 | Connector Control Board |
 | Header | 2.54mm Female 1x11 | 1 | Connector Control Board |
 | Header | 2.54mm Female 1x20 | 2 | Socket Connector for Blue Pill Board |
-| Header | 2.54mm Female 2x5 | 1 | Power Connector |
+| Header | 2.54mm Male 2x5 | 1 | Power Connector |
 
 *) Depending on the LEDs used, they might be too bright. The resistors labeled as "LEDR" and "LEDG" can be used to adjust the brightness by reducing the current to each LED. The original design from Mutable Instruments lists 100R resistors for both the red and green part of the 2-color LEDs. I changed the values to 1K for red and 4.7K for green (blue in my case) for the LEDs used in my module.
