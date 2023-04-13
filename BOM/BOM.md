@@ -19,6 +19,7 @@
 | Resistor 1/4W | 3.3M | 1 | |
 | Resistor 1/4W | LEDR | 3 | see footnote *) |
 | Resistor 1/4W | LEDG | 3 | see footnote *) |
+| Trimmer | 50K | 1 | multi-turn |
 | Capacitor Electrolytic | 47uF | 2 | |
 | Capacitor Electrolytic | 22uF | 3 | |
 | Capacitor Ceramic | 3.3uF | 1 | |
@@ -27,26 +28,28 @@
 | Capacitor Ceramic | 0.01uF | 3 | |
 | Capacitor Ceramic | 1000pF | 3 | |
 | Capacitor Ceramic | 220pF | 4 | |
-| LED | 2-color, common cathode | 8 | |
+| LED | 2-color, common cathode | 2 | |
 | Transistor | MMBT3904 | 5 | SMD (SOT-23-3) |
-
-| Op Amp | NJM4580 or TL072 | 1 | SMD (8-SOIC) |
-| Op Amp | MCP6004 | 2 | SMD (14-SOIC) |
-| DAC | PCM5100APW | 1 | SMD (20-TSSOP) |
-| Microcontroller | STM32F373CCT6 | 1 | SMD (48-LQFP) |
-| LED Driver | TLC59281DBQ | 1 | SMD (24-SSOP) |
-| Oscillator Crystal | 8MHz | 1 | leg distance 4.8mm |
-| Voltage Regulator | LD2981ABU33 | 1 | SMD (SOT-89-3) |
-| Voltage Regulator | R-78E3.3-0.5 | 1 | |
+| Op Amp | TL074 | 1 | |
+| Op Amp | MCP6004 | 1 | |
+| Op Amp | MCP6002 | 1 | |
+| DAC | DAC8552 | 1 | SMD (8-TSSOP) |
+| Development Board | STM32F103 Blue Pill (128kB) | 1 | |
+| Voltage Regulator | LM1117-3.3 | 2 | SMD (SOT-223) |
 | Voltage Regulator | LM4040B10 | 1 | SMD (SOT-23-3) |
-| Inductor | 33uH | 1 | axial THT, if you use my PCB design |
-| Ferrite Bead | BLM18R | 3 | SMD (1608) |
-| Potentiometer | B10K | 7 | |
-| Mono Jack | 3.5mm | 10 | |
+| Voltage Regulator | LM4040B25 | 1 | SMD (SOT-23-3) |
+| Potentiometer | B10K | 5 | |
+| Mono Jack | 3.5mm | 13 | |
 | Switch | Tactile | 2 | e.g. Mouser: TL1105SPF160Q1RBLK |
-| Header | 2.54mm Male 1x7 | 4 | Connector Main Board |
-| Header | 2.54mm Female 1x7 | 4 | Connector Control Board |
+| Header | 2.54mm Male 1x2 | 2 | Connector Main Board |
+| Header | 2.54mm Male 1x4 | 1 | Connector Main Board |
+| Header | 2.54mm Male 1x7 | 1 | Connector Main Board |
+| Header | 2.54mm Male 1x11 | 1 | Connector Main Board |
+| Header | 2.54mm Female 1x2 | 2 | Connector Control Board |
+| Header | 2.54mm Female 1x4 | 1 | Connector Control Board |
+| Header | 2.54mm Female 1x7 | 1 | Connector Control Board |
+| Header | 2.54mm Female 1x11 | 1 | Connector Control Board |
+| Header | 2.54mm Female 1x20 | 2 | Socket Connector for Blue Pill Board |
 | Header | 2.54mm Female 2x5 | 1 | Power Connector |
 
-*) Depending on the LEDs used, they might be too bright. The resistor labeled as "LED" can be used to adjust the brightness by reducing the current from the common anode to each LED. The original design from Mutable Instruments does not include that resistor. So if you use the same LEDs, as in the commercial module, you can just bridge the resistor points with a wire. Otherwise try out different resistor values to adjust the LED brightness.
-
+*) Depending on the LEDs used, they might be too bright. The resistors labeled as "LEDR" and "LEDG" can be used to adjust the brightness by reducing the current to each LED. The original design from Mutable Instruments lists 100R resistors for both the red and green part of the 2-color LEDs. I changed the values to 1K for red and 4.7K for green (blue in my case) for the LEDs used in my module.
