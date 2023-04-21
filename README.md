@@ -49,13 +49,13 @@ Alternative firmware versions available, like e.g. Sheep or the Parasite version
 CAUTION! There are three different versions of the Blue Pill board available.
 The difference is the version of the ST32F103 microchip on the board.
 The versions differ in the flash memory size:
-- STM32F103C6: 32kB flash memory
-- STM32F103C8: 64kB flash memory
-- STM32F103CB: 128kB flash memory
+- STM32F103C6T6: 32kB flash memory
+- STM32F103C8T6: 64kB flash memory
+- STM32F103CBT6: 128kB flash memory
 
 The code size requires the 128kB version.
 However, that version might be difficult to find, if available at all.
-But it turned out, that STM3F103C8 is also ok for this module.
+But it turned out, that STM3F103C8T6 is also ok for this module.
 
 ## Calibration
 The calibration procedure is the same, as the one for the original module from Mutable Instruments.
