@@ -1,5 +1,5 @@
-# Tides - V1
-A clone of the Mutable Instruments Tides version 1 module with the use of the STM32F103 Blue Pill board.
+# Tides - v2014
+A clone of the Mutable Instruments Tides version 2014 module with the use of the STM32F103 Blue Pill board.
 
 <img height="500" src="https://user-images.githubusercontent.com/97026614/230910245-861a7b17-5967-4f9c-9a85-5b213ca0f8cf.jpg"> <img height="500" src="https://user-images.githubusercontent.com/97026614/230910377-67708e92-2e86-4ca6-b515-2f7fa9436733.jpg">
 
