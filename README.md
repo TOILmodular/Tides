@@ -45,6 +45,8 @@ The upload process is the same, as for my Braids clone. You can check out my [Br
 
 Alternative firmware versions available, like e.g. Sheep or the Parasite version, both available as .wav files can also be uploaded via the procedure described in the official Mutable Instruments manual.
 
+Check [this YouTube video](https://youtu.be/xhDt-fGgXi8) for more details about the firmware update process.
+
 ## STM32F103 Version
 CAUTION! There are three different versions of the Blue Pill board available.
 The difference is the version of the ST32F103 microchip on the board.
