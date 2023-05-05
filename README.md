@@ -36,7 +36,7 @@ Most of the components are through-hole, including the microchip part, thanks to
 - MMBT3904 (SMD version of the 2N3904 transistor, SOT-23-3 Package)
 - 0.1uF bypass caps for ICs (1608 package)
 
-Concerning the resistor size, I am usually using small-size resistors, about half the length of the usual size, so they need less space on the PCB. If you want to use my Gerber files, you have to consider tht fact. You might still use normal size resistors and put them in a standing position on the boards. Should also work fine.
+Concerning the resistor size, I am usually using small-size resistors, about half the length of the usual size, so they need less space on the PCB. If you want to use my Gerber files, you have to consider that fact. You might still use normal size resistors and put them in a standing position on the boards. Should also work fine.
 
 ## Firmware
 I shared the .hex files for the STM32F103 chip (bootloader and main) in the folder Firmware.
