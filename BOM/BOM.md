@@ -28,7 +28,7 @@
 | Capacitor Ceramic | 0.01uF | 3 | |
 | Capacitor Ceramic | 1000pF | 3 | |
 | Capacitor Ceramic | 220pF | 4 | |
-| LED | 2-color, common cathode | 2 | |
+| LED | 2-color, common cathode | 3 | |
 | Transistor | MMBT3904 | 5 | SMD (SOT-23-3) |
 | Op Amp | TL074 | 1 | |
 | Op Amp | MCP6004 | 1 | |
